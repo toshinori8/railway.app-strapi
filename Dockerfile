@@ -1,35 +1,20 @@
-# Faza build (kompilacja projektu Strapi)
-FROM node:18-alpine AS build
+FROM node:18-alpine
 
-# Potrzebne biblioteki dla zależności typu sharp
-RUN apk update && apk add --no-cache \
+# Dodatkowe zależności systemowe (np. do `sharp`)
+RUN apk add --no-cache \
     build-base autoconf automake libtool \
     vips-dev git python3
 
 WORKDIR /app
 
-# Kopiuj pliki pakietu i zainstaluj zależności
+# Kopiuj zależności i instaluj
 COPY package.json yarn.lock ./
 RUN yarn install
 
-# Skopiuj resztę aplikacji
+# Kopiuj cały projekt
 COPY . .
 
-# Buduj aplikację Strapi
-RUN yarn build
-
-# Faza produkcyjna (czysty obraz produkcyjny)
-FROM node:18-alpine
-
-RUN apk add --no-cache vips-dev
-
-ENV NODE_ENV=development
-WORKDIR /app
-
-# Kopiuj zbudowaną aplikację z poprzedniego etapu
-COPY --from=build /app ./
-
-# Ustawienia użytkownika (nie root)
+# Użytkownik nieroocowy
 RUN addgroup -g 1001 -S strapi && adduser -S strapi -u 1001 -G strapi
 USER strapi
 
