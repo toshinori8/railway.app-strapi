@@ -1,20 +1,20 @@
 FROM node:18-alpine
 
-# Dodatkowe zależności systemowe (np. do `sharp`)
+# Instalacja zależności systemowych (np. dla sharp)
 RUN apk add --no-cache \
     build-base autoconf automake libtool \
     vips-dev git python3
 
 WORKDIR /app
 
-# Kopiuj zależności i instaluj
+# Kopiowanie plików zależności i instalacja
 COPY package.json yarn.lock ./
 RUN yarn install
 
-# Kopiuj cały projekt
+# Kopiowanie reszty plików projektu
 COPY . .
 
-# Użytkownik nieroocowy
+# Tworzenie użytkownika nieroocowego
 RUN addgroup -g 1001 -S strapi && adduser -S strapi -u 1001 -G strapi
 USER strapi
 
