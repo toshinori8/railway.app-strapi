@@ -23,7 +23,7 @@ FROM node:18-alpine
 
 RUN apk add --no-cache vips-dev
 
-ENV NODE_ENV=production
+ENV NODE_ENV=development
 WORKDIR /app
 
 # Kopiuj zbudowaną aplikację z poprzedniego etapu
@@ -34,4 +34,4 @@ RUN addgroup -g 1001 -S strapi && adduser -S strapi -u 1001 -G strapi
 USER strapi
 
 EXPOSE 1337
-CMD ["yarn", "start"]
+CMD ["yarn", "develop"]
