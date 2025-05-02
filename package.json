@@ -16,6 +16,7 @@
     "@strapi/provider-upload-cloudinary": "5.12.7",
     "@strapi/strapi": "5.12.7",
     "pg": "8.8.0",
+    "pg-connection-string": "^2.8.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
@@ -29,7 +30,7 @@
     "typescript": "^5"
   },
   "engines": {
-       "node": ">=18.0.0 <=22.x.x",
+    "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
   "strapi": {
