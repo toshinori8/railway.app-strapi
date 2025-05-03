@@ -23,7 +23,7 @@ FROM node:18-alpine
 
 RUN apk add --no-cache vips-dev
 
-ENV NODE_ENV=development
+ENV NODE_ENV=production
 WORKDIR /app
 
 # Kopiuj zbudowaną aplikację z poprzedniego etapu
