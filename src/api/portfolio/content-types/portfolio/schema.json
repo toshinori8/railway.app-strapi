@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "portfolios",
+  "info": {
+    "singularName": "portfolio",
+    "pluralName": "portfolios",
+    "displayName": "Portfolio",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "miniatura": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "kategoria": {
+      "type": "enumeration",
+      "enum": [
+        "www",
+        "grafika",
+        "logo"
+      ]
+    },
+    "opis": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext",
+      "required": false
+    },
+    "Laptop_Tablet_Mobile": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "portfolios"
+    },
+    "content_blocks": {
+      "type": "blocks"
+    }
+  }
+}
