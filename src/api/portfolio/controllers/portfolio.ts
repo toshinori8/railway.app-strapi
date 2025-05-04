@@ -1,6 +1,6 @@
 import { factories } from '@strapi/strapi';
 
-export default factories.createCoreController('api::portfolio.portfolio', ({ strapi }) => ({
+export default factories.createCoreController('api::portfolio.portfolio' as any, ({ strapi }) => ({
   async find(ctx) {
     const response = await super.find(ctx);
 

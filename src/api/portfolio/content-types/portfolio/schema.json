@@ -1,6 +1,7 @@
 {
   "kind": "collectionType",
   "collectionName": "portfolios",
+  "uid": "api::portfolio.portfolio",
   "info": {
     "singularName": "portfolio",
     "pluralName": "portfolios",
