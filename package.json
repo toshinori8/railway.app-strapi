@@ -21,6 +21,7 @@
     "react-router-dom": "^6.0.0",
     "strapi-health-plugin": "^1.1.0",
     "strapi-import-export": "^0.0.1",
+    "strapi-plugin-media-upload": "^1.1.2",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
