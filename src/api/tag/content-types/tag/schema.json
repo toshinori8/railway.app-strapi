@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tag",
     "pluralName": "tags",
-    "displayName": "tags"
+    "displayName": "tags",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,6 +19,16 @@
       "relation": "manyToMany",
       "target": "api::portfolio.portfolio",
       "inversedBy": "tags"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
