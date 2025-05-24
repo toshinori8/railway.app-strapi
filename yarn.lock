@@ -9888,6 +9888,11 @@ strapi-import-export@^0.0.1:
     react-intl "^6.7.2"
     react-singleton-hook "^4.0.1"
 
+strapi-plugin-file-system@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/strapi-plugin-file-system/-/strapi-plugin-file-system-1.0.10.tgz#a4aa6028c175e3f76f5da4e0971a5d16bef04c0b"
+  integrity sha512-cDb1A/39L93lEpBp5ttuBipzf5myh1dSsAcFFDu7JqHl8Ym+ONPFUX4ZVehaEc5zc3XhDAGDjXz/SjoHZxFnnQ==
+
 strapi-plugin-media-upload@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/strapi-plugin-media-upload/-/strapi-plugin-media-upload-1.1.2.tgz#45f8ecb8b8566fcbce645c762dba30e9e54ee15f"

@@ -4,6 +4,9 @@ export default ({ env }) => ({
             jwtSecret: env('JWT_SECRET'),
         },
     },
+    'file-system': {
+    enabled: true,
+  },
   /*   upload: {
         config: {
             provider: 'cloudinary',
