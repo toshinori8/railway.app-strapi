@@ -2576,12 +2576,12 @@
     "@strapi/utils" "5.11.3"
     sendmail "^1.6.1"
 
-"@strapi/provider-upload-cloudinary@5.11.3":
-  version "5.11.3"
-  resolved "https://registry.yarnpkg.com/@strapi/provider-upload-cloudinary/-/provider-upload-cloudinary-5.11.3.tgz#a92d7d82a75afe1482110be3afdb9c57cd3a7b0b"
-  integrity sha512-3f+t3q6eAqOO0qkW+t/pJO5s6z9t45l1mZH+mL++pdwY7Z1l7JFEZWRL2LjXMYUafGsY5BuLSP8VaCyDREBBIQ==
+"@strapi/provider-upload-cloudinary@^5.13.1":
+  version "5.13.1"
+  resolved "https://registry.yarnpkg.com/@strapi/provider-upload-cloudinary/-/provider-upload-cloudinary-5.13.1.tgz#eef729f40bba8a8497ffce3522e54bb4daf19405"
+  integrity sha512-DJWcES11kcoOfT5+lHgcY9pDuKK2lexIwaJcIuHzo3hcnpo4jS7p6HapRddIjbi7LlFsjC38MAB3AdeBdPP/7Q==
   dependencies:
-    "@strapi/utils" "5.11.3"
+    "@strapi/utils" "5.13.1"
     cloudinary "^1.41.0"
     into-stream "^5.1.0"
 
@@ -2829,6 +2829,23 @@
     date-fns "2.30.0"
     execa "5.1.1"
     http-errors "2.0.0"
+    lodash "4.17.21"
+    node-machine-id "1.1.12"
+    p-map "4.0.0"
+    preferred-pm "3.1.2"
+    yup "0.32.9"
+    zod "^3.22.4"
+
+"@strapi/utils@5.13.1":
+  version "5.13.1"
+  resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-5.13.1.tgz#e60ec78e5056aa95379d1ed7de55fe307fd2bb25"
+  integrity sha512-5NhWGLDhY2D82OTig315Jxie/pKh9wsLu7PDdrA9ErsHKFa1UVOpecDKGy7gJesO7tgJZM6so6EgNK0DcrTNNA==
+  dependencies:
+    "@sindresorhus/slugify" "1.1.0"
+    date-fns "2.30.0"
+    execa "5.1.1"
+    http-errors "2.0.0"
+    json-logic-js "2.0.5"
     lodash "4.17.21"
     node-machine-id "1.1.12"
     p-map "4.0.0"
@@ -6873,6 +6890,11 @@ json-buffer@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/json-buffer/-/json-buffer-3.0.1.tgz#9338802a30d3b6605fbe0613e094008ca8c05a13"
   integrity sha512-4bV5BfR2mqfQTJm+V5tPPdf+ZpuhiIvTuAB5g8kcrXOZpTT/QwwVRWBywX1ozr6lEuPdbHxwaJlm9G6mI2sfSQ==
+
+json-logic-js@2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/json-logic-js/-/json-logic-js-2.0.5.tgz#55f0c687dd6f56b02ccdcfdd64171ed998ab5499"
+  integrity sha512-rTT2+lqcuUmj4DgWfmzupZqQDA64AdmYqizzMPWj3DxGdfFNsxPpcNVSaTj4l8W2tG/+hg7/mQhxjU3aPacO6g==
 
 json-parse-even-better-errors@^2.3.0, json-parse-even-better-errors@^2.3.1:
   version "2.3.1"
