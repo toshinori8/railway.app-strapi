@@ -29,8 +29,11 @@ WORKDIR /app
 # Kopiuj zbudowaną aplikację z poprzedniego etapu
 COPY --from=build /app ./
 
-# Ustawienia użytkownika (nie root)
-RUN addgroup -g 1001 -S strapi && adduser -S strapi -u 1001 -G strapi
+# 🔧 Ustawienia katalogów i uprawnień
+RUN addgroup -g 1001 -S strapi && adduser -S strapi -u 1001 -G strapi \
+    && mkdir -p /app/.tmp \
+    && chown -R strapi:strapi /app
+
 USER strapi
 
 EXPOSE 1337
