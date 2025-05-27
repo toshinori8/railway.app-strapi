@@ -1,5 +1,5 @@
 # Faza build (kompilacja projektu Strapi)
-FROM node:18-alpine AS build
+FROM node:20-alpine AS build
 
 # Potrzebne biblioteki dla zależności typu sharp
 RUN apk update && apk add --no-cache \
@@ -19,7 +19,7 @@ COPY . .
 RUN yarn build
 
 # Faza produkcyjna (czysty obraz produkcyjny)
-FROM node:18-alpine
+FROM node:20-alpine
 
 RUN apk add --no-cache vips-dev
 
